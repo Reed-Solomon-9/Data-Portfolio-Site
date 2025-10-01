@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio | Reed W. Solomon</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a professional look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        .project-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-indigo-700 text-white shadow-lg py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-extrabold mb-2">Reed W. Solomon</h1>
+            <p class="text-xl font-light">Data Analyst | SQL, Tableau, Spreadsheets | Business Insight & Storytelling</p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-4 py-12">
+
+        <!-- About/Summary Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold border-b-4 border-indigo-500 pb-2 mb-6 text-indigo-700">About Me</h2>
+            <p class="text-lg leading-relaxed">
+                As a highly motivated professional transitioning into data analytics, I combine a strong foundation in <b>Economics<b> and operational experience with deep technical proficiency in <b>SQL, Tableau, and Advanced Spreadsheets<b>. My focus is on translating complex, messy data into clear, fact-based narratives that drive strategic business decisions. My portfolio demonstrates a comprehensive understanding of the full analytical lifecycle, from <b>ETL<b> to final <b>Data Visualization<b>.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold border-b-4 border-indigo-500 pb-2 mb-6 text-indigo-700">Core Competencies</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-lg">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Tools & Programming</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>SQL (PostgreSQL, BigQuery)</li>
+                        <li>Tableau</li>
+                        <li>Advanced Spreadsheets (Excel, Sheets)</li>
+                        <li>R (Tidyverse, ggplot2)</li>
+                        <li>QGIS</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Methodologies</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Data Cleaning & ETL</li>
+                        <li>Data Visualization & Storytelling</li>
+                        <li>Data Reconciliation</li>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                        <li>Process Optimization</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Transferable Skills</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Stakeholder Communication</li>
+                        <li>Critical Thinking</li>
+                        <li>Problem-Solving</li>
+                        <li>Operational Analysis</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2 class="text-3xl font-bold border-b-4 border-indigo-500 pb-2 mb-6 text-indigo-700">Featured Data Projects</h2>
+            <div class="space-y-8">
+
+                <!-- Project 1: Bikeshare Analysis -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. Bikeshare User Behavior & Market Strategy</h3>
+                    <p class="text-gray-700 mb-4">
+                        Comprehensive case study analyzing fictional bikeshare data to identify user demographics, high-demand routes, and seasonal usage patterns. The goal was to provide data-driven recommendations for service expansion and subscription optimization.
+                    </p>
+                    <p class="font-medium mb-3"><b>Key Insights:<b> Identified optimal neighborhoods for expansion and proposed multiple promising subscription models, directly answering a core business question.</p>
+                    <div class="flex space-x-4">
+                        <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Dashboard (Tableau)</a>
+                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Code (GitHub)</a>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">Tools Used: SQL, Tableau, QGIS, R</p>
+                </div>
+
+                <!-- Project 2: Business Financial Analysis -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Small Business Financial Health Reconciliation</h3>
+                    <p class="text-gray-700 mb-4">
+                        A real-world project analyzing raw business bank statements to reconcile spending and revenue categories. Focus was on rigorous data cleaning, reconciliation, and creating a transparent financial view for business oversight.
+                    </p>
+                    <p class="font-medium mb-3"><b>Key Insights:<b> Uncovered evidence that over 20% of monthly spending was incorrectly categorized, leading to a reconciled budget and improved financial transparency.</p>
+                    <div class="flex space-x-4">
+                        <a href="[LINK TO GOOGLE SHEET or PDF REPORT]" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Report/Sheet</a>
+                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Methodology (GitHub)</a>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">Tools Used: Advanced Google Sheets, Data Reconciliation, ETL</p>
+                </div>
+
+                <!-- Project 3: Fitness Tracker Data -->
+                <div class="project-card bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">3. Fitness Tracker Data: Behavior and Correlation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Exploratory analysis of anonymous user fitness data, utilizing SQL to join metrics and Tableau to visualize relationships between user activity, sleep, and heart rate.
+                    </p>
+                    <p class="font-medium mb-3"><b>Key Insights:<b> Established a strong correlation between sleep duration and daily activity levels, providing a foundation for targeted wellness program recommendations.</p>
+                    <div class="flex space-x-4">
+                        <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Dashboard (Tableau)</a>
+                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Code (GitHub)</a>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2">Tools Used: SQL, Tableau (Gantt Charts, Scatterplots)</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-200 py-6 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
+            <p>&copy; 2025 Reed W. Solomon | Built with <a href="https://tailwindcss.com/" target="_blank" class="text-indigo-600 hover:text-indigo-800">Tailwind CSS</a></p>
+            <p class="mt-2 text-sm">
+                <a href="mailto:[Your Email]" class="text-indigo-600 hover:text-indigo-800">[Your Email]</a> | 
+                <a href="[Link to your full LinkedIn Profile]" target="_blank" class="text-indigo-600 hover:text-indigo-800">LinkedIn Profile</a>
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
