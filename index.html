@@ -6,28 +6,58 @@
     <title>Data Analyst Portfolio | Reed W. Solomon</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome Icons (Solid style for tools) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJzL0Jm2Olw3+9wM7v+5uBv2lG5Y5W5d2k/j9qXGqY5K5C5P5e5C5A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Custom font import for a professional look */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100..900&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Lato', sans-serif;
+            /* Lighter dark background for better contrast separation */
+            background-color: #1f1f1f; 
+            color: #e4e4e7; 
         }
         .project-card {
+            /* Slightly darker card background for contrast */
+            background-color: #242424; 
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6); 
+        }
+        /* Custom class for the primary, larger button */
+        .primary-link {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.125rem; 
+            transition: all 0.2s;
+        }
+        .primary-link:hover {
+            box-shadow: 0 4px 6px -1px rgba(129, 140, 248, 0.4), 0 2px 4px -2px rgba(129, 140, 248, 0.4); /* Subtle glow effect */
+        }
+        /* Custom class for elegant text shadow on the header title */
+        .header-title-shadow {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        /* Adjusting for specific colors within the theme - using Indigo-400 for contrast */
+        .text-indigo-400 {
+            color: #818cf8; /* Lighter Indigo for headings */
+        }
+        .border-indigo-400 {
+            border-color: #818cf8; /* Lighter Indigo border */
+        }
+        .text-red-400 {
+            color: #f87171; /* Ensure red is bright against dark background */
         }
     </style>
 </head>
-<body class="text-gray-800">
+<!-- Applying base classes for dark mode -->
+<body class="text-gray-100 bg-gray-900">
 
-    <!-- Header Section -->
-    <header class="bg-indigo-700 text-white shadow-lg py-12">
+    <!-- Header Section (Gradient, Tagline, and Stronger Shadow) -->
+    <header class="bg-gradient-to-b from-indigo-800 to-indigo-700 text-indigo-100 shadow-2xl py-12">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-5xl font-extrabold mb-2">Reed W. Solomon</h1>
+            <h1 class="text-5xl font-extrabold mb-3 header-title-shadow">Reed W. Solomon</h1>
             <p class="text-xl font-light">Data Analyst | SQL, Tableau, Spreadsheets | Business Insight & Storytelling</p>
         </div>
     </header>
@@ -35,46 +65,132 @@
     <!-- Main Content Container -->
     <main class="max-w-4xl mx-auto px-4 py-12">
 
-        <!-- About/Summary Section -->
+        <!-- About/Summary Section (Now at the top after header) -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold border-b-4 border-indigo-500 pb-2 mb-6 text-indigo-700">About Me</h2>
-            <p class="text-lg leading-relaxed">
-                As a highly motivated professional transitioning into data analytics, I combine a strong foundation in <b>Economics<b> and operational experience with deep technical proficiency in <b>SQL, Tableau, and Advanced Spreadsheets<b>. My focus is on translating complex, messy data into clear, fact-based narratives that drive strategic business decisions. My portfolio demonstrates a comprehensive understanding of the full analytical lifecycle, from <b>ETL<b> to final <b>Data Visualization<b>.
+            <h2 class="text-3xl font-bold border-b-2 border-gray-600 pb-2 mb-6 text-indigo-400">About Me</h2>
+            <p class="text-lg leading-relaxed text-gray-300">
+                Driven by a background in Economics and operational leadership, I am executing a career pivot to deliver data-driven business strategy, showcased through my analytical projects below.
             </p>
         </section>
 
-        <!-- Skills Section -->
+         <!-- Skills Section -->
         <section class="mb-12">
-            <h2 class="text-3xl font-bold border-b-4 border-indigo-500 pb-2 mb-6 text-indigo-700">Core Competencies</h2>
+            <h2 class="text-3xl font-bold border-b-2 border-gray-600 pb-2 mb-6 text-indigo-400">Core Competencies</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-lg">
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Tools & Programming</h3>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li>SQL (PostgreSQL, BigQuery)</li>
-                        <li>Tableau</li>
-                        <li>Advanced Spreadsheets (Excel, Sheets)</li>
-                        <li>R (Tidyverse, ggplot2)</li>
-                        <li>QGIS</li>
+                <!-- Tools & Programming -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-400">Tools & Programming</h3>
+                    <ul class="space-y-3 text-gray-300 mt-4">
+                        <li class="flex">
+                            <i class="fas fa-database text-indigo-400 w-6 flex-shrink-0 mr-2"></i> 
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">SQL</span>
+                                <p class="text-sm text-gray-400 pl-1">(PostgreSQL, BigQuery)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chart-area text-indigo-400 w-6 flex-shrink-0 mr-2"></i> 
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Data Visualization</span>
+                                <p class="text-sm text-gray-400 pl-1">(Tableau)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-table text-indigo-400 w-6 flex-shrink-0 mr-2"></i> 
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Advanced Spreadsheets</span>
+                                <p class="text-sm text-gray-400 pl-1">(Excel, Google Sheets, Advanced Functions)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-calculator text-indigo-400 w-6 flex-shrink-0 mr-2"></i> 
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">R</span>
+                                <p class="text-sm text-gray-400 pl-1">(Tidyverse, ggplot2)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-map-marked-alt text-indigo-400 w-6 flex-shrink-0 mr-2"></i> 
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">QGIS</span>
+                                <p class="text-sm text-gray-400 pl-1">(Geospatial Analysis)</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Methodologies</h3>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li>Data Cleaning & ETL</li>
-                        <li>Data Visualization & Storytelling</li>
-                        <li>Data Reconciliation</li>
-                        <li>Exploratory Data Analysis (EDA)</li>
-                        <li>Process Optimization</li>
+                <!-- Methodologies -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-400">Methodologies</h3>
+                    <ul class="space-y-3 text-gray-300 mt-4">
+                        <li class="flex">
+                            <i class="fas fa-broom text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Data Cleaning & ETL</span>
+                                <p class="text-sm text-gray-400 pl-1">(Extract, Transform, Load)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-chart-pie text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Data Visualization & Storytelling</span>
+                                <p class="text-sm text-gray-400 pl-1">(Actionable Insight Delivery)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-balance-scale text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Data Reconciliation</span>
+                                <p class="text-sm text-gray-400 pl-1">(Ensuring Data Integrity)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-search text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Exploratory Data Analysis (EDA)</span>
+                                <p class="text-sm text-gray-400 pl-1">(Pattern & Trend Discovery)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-sync-alt text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Process Optimization</span>
+                                <p class="text-sm text-gray-400 pl-1">(Efficiency & Workflow Improvement)</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow">
-                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Transferable Skills</h3>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li>Stakeholder Communication</li>
-                        <li>Critical Thinking</li>
-                        <li>Problem-Solving</li>
-                        <li>Operational Analysis</li>
-                        <li>Project Management</li>
+                <!-- Transferable Skills -->
+                <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-400">Transferable Skills</h3>
+                    <ul class="space-y-3 text-gray-300 mt-4">
+                        <li class="flex">
+                            <i class="fas fa-comments text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Stakeholder Communication</span>
+                                <p class="text-sm text-gray-400 pl-1">(Translating complex concepts)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-brain text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Critical Thinking</span>
+                                <p class="text-sm text-gray-400 pl-1">(Root Cause Analysis)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-cogs text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Operational Analysis</span>
+                                <p class="text-sm text-gray-400 pl-1">(Process & Performance Mapping)</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fas fa-tasks text-indigo-400 w-6 flex-shrink-0 mr-2"></i>
+                            <div class="flex-grow">
+                                <span class="font-semibold text-gray-100">Project Management</span>
+                                <p class="text-sm text-gray-400 pl-1">(Time & Resource Allocation)</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -82,49 +198,62 @@
 
         <!-- Projects Section -->
         <section>
-            <h2 class="text-3xl font-bold border-b-4 border-indigo-500 pb-2 mb-6 text-indigo-700">Featured Data Projects</h2>
-            <div class="space-y-8">
+            <h2 class="text-3xl font-bold border-b-2 border-gray-600 pb-2 mb-6 text-indigo-400">Featured Data Projects</h2>
+            <div class="space-y-10">
 
-                <!-- Project 1: Bikeshare Analysis -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-xl">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">1. Bikeshare User Behavior & Market Strategy</h3>
-                    <p class="text-gray-700 mb-4">
-                        Comprehensive case study analyzing fictional bikeshare data to identify user demographics, high-demand routes, and seasonal usage patterns. The goal was to provide data-driven recommendations for service expansion and subscription optimization.
+                <!-- Project 1: Bikeshare Analysis (Report Primary) -->
+                <div class="project-card p-6 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold text-gray-100 mb-3">1. Bikeshare User Behavior & Market Strategy</h3>
+                    <p class="text-gray-300 mb-4">
+                        Comprehensive case study analyzing bikeshare data to identify differences in user behavior between casual riders and subscription members. The final deliverable focused on data-driven recommendations for service expansion and subscription optimization for a fictional company.
                     </p>
-                    <p class="font-medium mb-3"><b>Key Insights:<b> Identified optimal neighborhoods for expansion and proposed multiple promising subscription models, directly answering a core business question.</p>
-                    <div class="flex space-x-4">
-                        <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Dashboard (Tableau)</a>
-                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Code (GitHub)</a>
+                    <!-- Highlighted Key Insights section with adjusted dark background and light text -->
+                    <p class="font-medium mb-3 bg-indigo-900/50 text-indigo-100 p-3 rounded-lg border border-indigo-700/50"><b>Key Insights:</b> Identified optimal neighborhoods for expansion and proposed multiple promising subscription models, directly answering a core business question.</p>
+                    <div class="flex space-x-4 items-center mt-4">
+                        <!-- PRIMARY LINK -->
+                        <a href="[LINK TO FINAL REPORT PDF/DOC]" target="_blank" class="primary-link bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">Read Full Analysis & Recommendations (PDF)</a>
+                        <!-- SECONDARY LINK: Tableau Dashboard -->
+                        <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="text-red-400 hover:text-red-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-red-600 hover:border-red-500">Tableau Workbook</a>
+                        <!-- SECONDARY LINK: GitHub Code -->
+                        <a href="https://github.com/Reed-Solomon-9/Google-Data-Certificate-Capstone-Bike-Share" target="_blank" class="text-gray-400 hover:text-gray-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:border-gray-500">GitHub Repository</a>
                     </div>
-                    <p class="text-sm text-gray-500 mt-2">Tools Used: SQL, Tableau, QGIS, R</p>
+                    <p class="text-sm text-gray-500 mt-3">Tools Used: PostgreSQL, Tableau, QGIS</p>
                 </div>
 
-                <!-- Project 2: Business Financial Analysis -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-xl">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">2. Small Business Financial Health Reconciliation</h3>
-                    <p class="text-gray-700 mb-4">
-                        A real-world project analyzing raw business bank statements to reconcile spending and revenue categories. Focus was on rigorous data cleaning, reconciliation, and creating a transparent financial view for business oversight.
+                <!-- Project 2: Business Financial Analysis (Report Primary) -->
+                <div class="project-card p-6 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold text-gray-100 mb-3">2. Small Business Financial Health Reconciliation</h3>
+                    <p class="text-gray-300 mb-4">
+                        A real-world project analyzing raw business bank statements for a small company in the <b>food/beverage industry</b>, to reconcile and categorize all revenue and expense streams. Focus was on rigorous <b>data reconciliation</b> and creating a transparent financial view for business oversight.
                     </p>
-                    <p class="font-medium mb-3"><b>Key Insights:<b> Uncovered evidence that over 20% of monthly spending was incorrectly categorized, leading to a reconciled budget and improved financial transparency.</p>
-                    <div class="flex space-x-4">
-                        <a href="[LINK TO GOOGLE SHEET or PDF REPORT]" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Report/Sheet</a>
-                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Methodology (GitHub)</a>
+                    <!-- Highlighted Key Insights section with adjusted dark background and light text -->
+                    <p class="font-medium mb-3 bg-indigo-900/50 text-indigo-100 p-3 rounded-lg border border-indigo-700/50"><b>Key Insights:</b> Uncovered evidence that over 20% of monthly spending was incorrectly categorized, leading to a reconciled budget and improved financial transparency.</p>
+                    <div class="flex space-x-4 items-center mt-4">
+                        <!-- PRIMARY LINK -->
+                        <a href="[LINK TO GOOGLE SHEET or PDF REPORT]" target="_blank" class="primary-link bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">View Reconciled Report (PDF)</a>
+                        <!-- SECONDARY LINK: GitHub Methodology -->
+                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="text-gray-400 hover:text-gray-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:border-gray-500">View Methodology (GitHub)</a>
                     </div>
-                    <p class="text-sm text-gray-500 mt-2">Tools Used: Advanced Google Sheets, Data Reconciliation, ETL</p>
+                    <p class="text-sm text-gray-500 mt-3">Tools Used: Google Sheets, Data Reconciliation, ETL</p>
                 </div>
 
-                <!-- Project 3: Fitness Tracker Data -->
-                <div class="project-card bg-white p-6 rounded-lg shadow-xl">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">3. Fitness Tracker Data: Behavior and Correlation</h3>
-                    <p class="text-gray-700 mb-4">
+                <!-- Project 3: Fitness Tracker Data (Report Primary) -->
+                <div class="project-card p-6 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-semibold text-gray-100 mb-3">3. Fitness Tracker Data: Behavior and Correlation</h3>
+                    <p class="text-gray-300 mb-4">
                         Exploratory analysis of anonymous user fitness data, utilizing SQL to join metrics and Tableau to visualize relationships between user activity, sleep, and heart rate.
                     </p>
-                    <p class="font-medium mb-3"><b>Key Insights:<b> Established a strong correlation between sleep duration and daily activity levels, providing a foundation for targeted wellness program recommendations.</p>
-                    <div class="flex space-x-4">
-                        <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Dashboard (Tableau)</a>
-                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-lg transition duration-200 shadow-md">View Code (GitHub)</a>
+                    <!-- Highlighted Key Insights section with adjusted dark background and light text -->
+                    <p class="font-medium mb-3 bg-indigo-900/50 text-indigo-100 p-3 rounded-lg border border-indigo-700/50"><b>Key Insights:</b> Established a strong correlation between sleep duration and daily activity levels, providing a foundation for targeted wellness program recommendations.</p>
+                    <div class="flex space-x-4 items-center mt-4">
+                        <!-- PRIMARY LINK -->
+                        <a href="[LINK TO FINAL REPORT PDF/DOC]" target="_blank" class="primary-link bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">Read Correlation Report (PDF)</a>
+                        <!-- SECONDARY LINK: Tableau Dashboard -->
+                        <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="text-red-400 hover:text-red-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-red-600 hover:border-red-500">Tableau Workbook</a>
+                        <!-- SECONDARY LINK: GitHub Code -->
+                        <a href="https://github.com/Reed-Solomon-9/Google-Analytics-Case-Study-2-Bellabeat" target="_blank" class="text-gray-400 hover:text-gray-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:border-gray-500">GitHub Repository</a>
                     </div>
-                    <p class="text-sm text-gray-500 mt-2">Tools Used: SQL, Tableau (Gantt Charts, Scatterplots)</p>
+                    <p class="text-sm text-gray-500 mt-3">Tools Used: PostgreSQL, Tableau (Gantt Charts, Scatterplots), Google Sheets</p>
                 </div>
 
             </div>
@@ -132,16 +261,50 @@
 
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-200 py-6 mt-12">
-        <div class="max-w-4xl mx-auto px-4 text-center text-gray-600">
-            <p>&copy; 2025 Reed W. Solomon | Built with <a href="https://tailwindcss.com/" target="_blank" class="text-indigo-600 hover:text-indigo-800">Tailwind CSS</a></p>
-            <p class="mt-2 text-sm">
-                <a href="mailto:[Your Email]" class="text-indigo-600 hover:text-indigo-800">[Your Email]</a> | 
-                <a href="[Link to your full LinkedIn Profile]" target="_blank" class="text-indigo-600 hover:text-indigo-800">LinkedIn Profile</a>
+    <!-- Footer Section (Now includes Education & Certifications) -->
+    <footer class="bg-gray-800 py-6 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center text-gray-400">
+            <!-- Contact Links -->
+            <p class="mt-2 text-sm font-semibold">
+                <a href="mailto:rsolomon45@gmail.com" class="text-indigo-400 hover:text-indigo-300 transition duration-200">rsolomon45@gmail.com</a> 
+                <span class="mx-2 text-gray-500">|</span> 
+                <a href="www.linkedin.com/in/reed-solomon-5a2052126" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition duration-200">LinkedIn Profile</a>
             </p>
+
+            <!-- Divider -->
+            <hr class="border-gray-700 w-3/4 mx-auto my-4">
+
+            <!-- Education & Certifications -->
+            <div class="text-sm space-y-1">
+                <p class="font-semibold text-gray-300">Google Data Analytics Professional Certificate</p>
+                <p class="text-xs text-gray-500">Coursera | Issued July 2025 | <a href="https://www.coursera.org/account/accomplishments/professional-cert/NEBZQZTGDIGS" target="_blank" class="text-indigo-400 hover:text-indigo-300 underline">Verify Certificate</a></p>
+                
+                <p class="font-semibold text-gray-300 mt-2">B.A. in Economics</p>
+                <p class="text-xs text-gray-500">Sonoma State University | Graduated December 2013</p>
+            </div>
+            
+            <p class="mt-4 text-xs text-gray-500">&copy; 2025 Reed W. Solomon | Built with <a href="https://tailwindcss.com/" target="_blank" class="text-indigo-400 hover:text-indigo-300">Tailwind CSS</a></p>
         </div>
     </footer>
     
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTop" class="fixed bottom-4 right-4 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-500 transition-opacity duration-300 opacity-0" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+        </svg>
+    </button>
+    <script>
+        // JavaScript for the Scroll-to-Top Button visibility
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollToTopButton.classList.remove('opacity-0');
+                scrollToTopButton.classList.add('opacity-100');
+            } else {
+                scrollToTopButton.classList.remove('opacity-100');
+                scrollToTopButton.classList.add('opacity-0');
+            }
+        };
+    </script>
 </body>
 </html>
