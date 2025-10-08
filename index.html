@@ -16,6 +16,23 @@
             /* Lighter dark background for better contrast separation */
             background-color: #1f1f1f; 
             color: #e4e4e7; 
+
+            /* --- SUBTLE DATA BACKGROUND ENHANCEMENT (Structured Matrix Pattern) --- */
+            
+            /* Define the visible bar chart unit (positioned in the top-left of its 1000x1000 tile) */
+            --bar-chart-unit: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'><!-- Bars (all placed near the top left of the 1000x1000 tile) --><rect x='10' y='800' width='30' height='190' fill='rgba(255,255,255,0.02)'/><rect x='60' y='760' width='30' height='230' fill='rgba(255,255,255,0.02)'/><rect x='110' y='850' width='30' height='140' fill='rgba(255,255,255,0.02)'/><rect x='160' y='680' width='30' height='310' fill='rgba(255,255,255,0.02)'/><rect x='210' y='790' width='30' height='200' fill='rgba(255,255,255,0.02)'/></svg>");
+            
+            /* Use multiple backgrounds for the complex pattern layering (5x5 matrix visibility) */
+            /* The base tile size for the repeat */
+            --base-tile-size: 250px 250px; 
+            --bar-spacing: 50px; 
+            
+            /* Staggering the pattern to achieve the matrix effect using two offset layers */
+            background-image: var(--bar-chart-unit), var(--bar-chart-unit);
+            background-size: 1000px 500px; /* How big one visible pattern section is */
+            background-position: 10px 100px, 500px 400px; /* Strategic offsets to create the gaps */
+            /* End of Background Enhancement */
+
         }
         .project-card {
             /* Slightly darker card background for contrast */
@@ -211,14 +228,18 @@
                     <p class="font-medium mb-3 bg-indigo-900/50 text-indigo-100 p-3 rounded-lg border border-indigo-700/50"><b>Key Insights:</b> Identified optimal neighborhoods for expansion and proposed multiple promising subscription models, directly answering a core business question.</p>
                     <div class="flex space-x-4 items-center mt-4">
                         <!-- PRIMARY LINK -->
-                        <a href="[LINK TO FINAL REPORT PDF/DOC]" target="_blank" class="primary-link bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">Read Full Analysis & Recommendations (PDF)</a>
+                        <a href="[LINK TO FINAL REPORT PDF/DOC]" target="_blank" class="primary-link bg-red-500 hover:bg-red-400 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">Read Full Analysis & Recommendations (PDF)</a>
                         <!-- SECONDARY LINK: Tableau Dashboard -->
                         <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="tableau-light-button bg-indigo-200 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center shadow-md">
                             <img src="./tableau_logo.svg" alt="Tableau Logo" class="tableau-logo-img h-10 w-10 mr-2">
                             <span>Tableau Workbook</span>
                         </a>
                         <!-- SECONDARY LINK: GitHub Code -->
-                        <a href="https://github.com/Reed-Solomon-9/Google-Data-Certificate-Capstone-Bike-Share" target="_blank" class="text-gray-400 hover:text-gray-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:border-gray-500">GitHub Repository</a>
+                        <a href="https://github.com/Reed-Solomon-9/Google-Data-Certificate-Capstone-Bike-Share" target="_blank" class="bg-gray-400 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center shadow-md">
+                            <img src="./github_logo.svg" alt="GitHub Logo" class="github-logo-img h-10 w-10 mr-2">
+                            <span>GitHub Repository</span>
+                        </a>
+                    
                     </div>
                     <p class="text-sm text-gray-500 mt-3">Tools Used: PostgreSQL, Tableau, QGIS</p>
                 </div>
@@ -233,10 +254,13 @@
                     <p class="font-medium mb-3 bg-indigo-900/50 text-indigo-100 p-3 rounded-lg border border-indigo-700/50"><b>Key Insights:</b> Uncovered evidence that over 20% of monthly spending was incorrectly categorized, leading to a reconciled budget and improved financial transparency.</p>
                     <div class="flex space-x-4 items-center mt-4">
                         <!-- PRIMARY LINK -->
-                        <a href="[LINK TO GOOGLE SHEET or PDF REPORT]" target="_blank" class="primary-link bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">View Reconciled Report (PDF)</a>
+                        <a href="[LINK TO GOOGLE SHEET or PDF REPORT]" target="_blank" class="primary-link bg-red-500 hover:bg-red-400 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">View Reconciled Report (PDF)</a>
                         <!-- SECONDARY LINK: GitHub Methodology -->
-                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="text-gray-400 hover:text-gray-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:border-gray-500">View Methodology (GitHub)</a>
-                    </div>
+                        <a href="[LINK TO GITHUB REPO]" target="_blank" class="bg-gray-400 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center shadow-md">
+                            <img src="./github_logo.svg" alt="GitHub Logo" class="github-logo-img h-10 w-10 mr-2">
+                            <span>GitHub Repository</span>
+                        </a>
+                        </div>
                     <p class="text-sm text-gray-500 mt-3">Tools Used: Google Sheets, Data Reconciliation, ETL</p>
                 </div>
 
@@ -250,15 +274,18 @@
                     <p class="font-medium mb-3 bg-indigo-900/50 text-indigo-100 p-3 rounded-lg border border-indigo-700/50"><b>Key Insights:</b> Established a strong correlation between sleep duration and daily activity levels, providing a foundation for targeted wellness program recommendations.</p>
                     <div class="flex space-x-4 items-center mt-4">
                         <!-- PRIMARY LINK -->
-                        <a href="[LINK TO FINAL REPORT PDF/DOC]" target="_blank" class="primary-link bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">Read Correlation Report (PDF)</a>
+                        <a href="[LINK TO FINAL REPORT PDF/DOC]" target="_blank" class="primary-link bg-red-500 hover:bg-red-400 text-white font-extrabold py-3 px-6 rounded-lg transition duration-200 shadow-lg">Read Correlation Report (PDF)</a>
                         <!-- SECONDARY LINK: Tableau Dashboard -->
                         <a href="[LINK TO TABLEAU PUBLIC DASHBOARD]" target="_blank" class="tableau-light-button bg-indigo-200 hover:bg-indigo-100 text-indigo-700 font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center shadow-md">
                             <img src="./tableau_logo.svg" alt="Tableau Logo" class="tableau-logo-img h-10 w-10 mr-2">
                             <span>Tableau Workbook</span>
                         </a>
                             <!-- SECONDARY LINK: GitHub Code -->
-                        <a href="https://github.com/Reed-Solomon-9/Google-Analytics-Case-Study-2-Bellabeat" target="_blank" class="text-gray-400 hover:text-gray-300 font-medium py-2 px-4 rounded-lg transition duration-200 border border-gray-600 hover:border-gray-500">GitHub Repository</a>
-                    </div>
+                        <a href="https://github.com/Reed-Solomon-9/Google-Analytics-Case-Study-2-Bellabeat" target="_blank" class="bg-gray-400 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center shadow-md">
+                            <img src="./github_logo.svg" alt="GitHub Logo" class="github-logo-img h-10 w-10 mr-2">
+                            <span>GitHub Repository</span>
+                        </a>
+                        </div>
                     <p class="text-sm text-gray-500 mt-3">Tools Used: PostgreSQL, Tableau (Gantt Charts, Scatterplots), Google Sheets</p>
                 </div>
 
